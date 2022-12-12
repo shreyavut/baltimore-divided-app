@@ -183,7 +183,7 @@ server <- function(input, output, session){
         st_drop_geometry(race_and_income_table) %>%
         ## add 2020 per capita income
         #dplyr::select(-geoid, - name, -state, -census_tract, -object_id) %>%
-        dplyr::select("Neighborhood", total_population, "Change in Per Capita Income", "Percent White", "Percent Black", "Percent Hispanic/Latino", "Percent Asian", "Census Tract", -geoid, - name, -state, -census_tract, -object_id) %>%
+        dplyr::select("Neighborhood", total_population, "2020 Per Capita Income", "Change in Per Capita Income", "Percent White", "Percent Black", "Percent Hispanic/Latino", "Percent Asian", "Census Tract", -geoid, - name, -state, -census_tract, -object_id) %>%
         rename(
           'Total Population' = total_population,
         )
@@ -200,7 +200,7 @@ server <- function(input, output, session){
 
       
       action <- DT::dataTableAjax(session, df, outputId = "Data explorer")
-      DT::datatable(df, escape = FALSE)
+      DT::datatable(df, escape = FALSE,  extensions = 'Responsive')
     
     }) 
 }

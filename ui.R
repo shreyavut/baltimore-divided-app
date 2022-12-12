@@ -42,7 +42,7 @@ ui <- fluidPage(
   #titlePanel("Hello Shiny!"),
   
   # Sidebar layout with input and output definitions ----
-  navbarPage("Baltimore Divided", id="nav",
+  navbarPage("Baltimore Divided", id="nav", collapsible = TRUE,
         
     tabPanel("Interactive map",
                       

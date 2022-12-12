@@ -40,7 +40,10 @@ redlining <- readRDS("data/d_regions.rds")  %>%
 
 ## prep
 income_only_columns <- percap_income_table %>%
-  dplyr::select(geoid, diff_2020_2010) %>%
+  dplyr::select(geoid, diff_2020_2010, x2020) %>%
+  rename(
+    "2020 Per Capita Income" = x2020
+  ) %>%
   st_drop_geometry(income_only_columns)
 
 ## join
