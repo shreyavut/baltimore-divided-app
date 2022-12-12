@@ -1,6 +1,7 @@
 library(tidyverse)
 library(tidycensus)
 library(shiny)
+library(rsconnect)
 library(shinythemes)
 library(shinyWidgets)
 library(janitor)
@@ -41,7 +42,7 @@ ui <- fluidPage(
   #titlePanel("Hello Shiny!"),
   
   # Sidebar layout with input and output definitions ----
-  navbarPage("Baltimore Reporting", id="nav",
+  navbarPage("Baltimore Divided", id="nav",
         
     tabPanel("Interactive map",
                       

@@ -1,0 +1,14 @@
+name: baltimore-divided-app
+title: baltimore-divided-app
+username:
+account: cnsmaryland
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7870452
+bundleId: 6624816
+url: https://cnsmaryland.shinyapps.io/baltimore-divided-app/
+when: 1670807775.77667
+lastSyncTime: 1670807775.77668
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: app.Rmd

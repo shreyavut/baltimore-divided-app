@@ -2,6 +2,7 @@
 library(tidyverse)
 library(tidycensus)
 library(shiny)
+library(rsconnect)
 library(shinythemes)
 library(shinyWidgets)
 library(janitor)
@@ -13,6 +14,14 @@ library(scales)
 #install.packages('shinyjs')
 library(shinyjs)
 library(htmlwidgets)
+
+my_packages = c("tidyverse", "tidycensus", "shiny", "shinythemes", "shinyWidgets", "janitor", "sf", "lubridate", "leaflet", "leaflet.extras", "scales", "shinyjs", "htmlwidgets", "rsconnect")
+install_if_missing = function(p) {
+  if (p %in% rownames(installed.packages()) == FALSE) {
+    install.packages(p)
+  }
+}
+invisible(sapply(my_packages, install_if_missing))
 
 
 race_table <- readRDS("data/balt_race_percentages_join.rds") %>%

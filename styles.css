@@ -47,3 +47,22 @@ h1, h2, h3, h4 { font-weight: 400; }
 .leaflet-container {
   background-color: white !important;
 }
+
+@media only screen and (max-width: 992px) {
+
+.row {
+  width: 80%;
+  padding: none;
+}
+
+.nav-link {
+  font-size: .8em;
+}
+
+body {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+}
